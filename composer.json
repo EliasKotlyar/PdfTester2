@@ -1,0 +1,21 @@
+{
+    "name": "twinsen/pdftester2",
+    "description": "PDF Tester V2",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "email": "info@mage2gen.com",
+            "name": "Mage2Gen"
+        }
+    ],
+    "type": "magento2-module",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "MagentoHackathon\\WordPdf\\": ""
+        }
+    }
+}
