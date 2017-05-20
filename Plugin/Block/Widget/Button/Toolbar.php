@@ -1,4 +1,5 @@
 <?php
+
 namespace Twinsen\PdfTester2\Plugin\Block\Widget\Button;
 
 use Magento\Backend\Block\Widget\Button\Toolbar as ToolbarContext;
@@ -22,7 +23,8 @@ class Toolbar
         ToolbarContext $toolbar,
         \Magento\Framework\View\Element\AbstractBlock $context,
         \Magento\Backend\Block\Widget\Button\ButtonList $buttonList
-    ) {
+    )
+    {
         if (!$context instanceof \Magento\Sales\Block\Adminhtml\Order\Invoice\View) {
             return [$context, $buttonList];
         }
@@ -30,7 +32,7 @@ class Toolbar
         $buttonList->add('display_pdf',
             [
                 'label' => __('Display PDF'),
-                'onclick' => 'setLocation(\'' . $context->getUrl('twinsen/displayPdf/index') . '\')',
+                'onclick' => 'setLocation(\'' . $context->getUrl('twinsen/displayPdf/index', array("invoice_id" => 1)) . '\')',
                 'class' => 'review'
             ]
         );
